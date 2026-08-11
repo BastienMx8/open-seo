@@ -33,11 +33,9 @@ services:
       - VITE_SHOW_DEVTOOLS=false
     expose:
       - "3001"
-     labels:
+    labels:
       - "traefik.http.middlewares.openseo-auth.basicauth.users=admin:$$apr1$$jyEklkGa$$C6F7msNtqvkvEZEIpfmyd/"
       - "traefik.http.routers.https-0-zr5mcfd5yboaa2xd0cozb75u-open-seo.middlewares=gzip,openseo-auth"
-
-      
     volumes:
       - open_seo_data:/app/.wrangler
 volumes:
