@@ -33,7 +33,7 @@ services:
       - VITE_SHOW_DEVTOOLS=false
     expose:
       - "3001"
-labels:
+    labels:
       - "traefik.enable=true"
       - "traefik.http.middlewares.gzip.compress=true"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
