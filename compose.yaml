@@ -37,7 +37,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.middlewares.gzip.compress=true"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.openseo-auth.basicauth.users=admin:TU_HASH"
+      - "traefik.http.middlewares.openseo-auth.basicauth.users=admin:$$apr1$$jyEklkGa$$C6F7msNtqvkvEZEIpfmyd/"
       - "traefik.http.routers.openseo-http.entrypoints=http"
       - "traefik.http.routers.openseo-http.rule=Host(`openseo.digiclic-marketing.cloud`)"
       - "traefik.http.routers.openseo-http.middlewares=redirect-to-https"
